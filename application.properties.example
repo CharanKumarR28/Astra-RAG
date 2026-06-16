@@ -1,0 +1,41 @@
+# ===========================
+# Application
+# ===========================
+spring.application.name=java-chatbot
+server.port=8080
+
+# ===========================
+# Groq AI API
+# ===========================
+groq.api.key=YOUR_GROQ_API_KEY
+groq.api.url=https://api.groq.com/openai/v1/chat/completions
+groq.api.model=llama-3.1-8b-instant
+groq.api.max-tokens=1024
+
+# ===========================
+# Pinecone Vector DB
+# ===========================
+pinecone.api.key=YOUR_PINECONE_API_KEY
+pinecone.index.url=YOUR_PINECONE_INDEX_URL
+pinecone.index.name=astra-rag-index
+
+# ===========================
+# RAG Config
+# ===========================
+rag.chunk.size=500
+rag.chunk.overlap=50
+rag.top.k=5
+
+# ===========================
+# Thymeleaf
+# ===========================
+spring.thymeleaf.cache=false
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.html
+
+# ===========================
+# File Upload
+# ===========================
+spring.servlet.multipart.enabled=true
+spring.servlet.multipart.max-file-size=20MB
+spring.servlet.multipart.max-request-size=20MB
