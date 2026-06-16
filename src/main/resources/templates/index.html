@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astra AI Chatbot</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-wrapper">
+
+            <!-- Header -->
+            <div class="chat-header">
+                <div class="header-content">
+                    <h1>🤖 Astra AI Assistant</h1>
+                    <p>Powered by Advanced AI Technology</p>
+                </div>
+                <!-- PDF Upload Button -->
+                <div class="upload-section">
+                    <label for="pdfUpload" class="upload-btn" title="Upload PDF to chat about it">
+                        📄 Upload PDF
+                    </label>
+                    <input type="file" id="pdfUpload" accept=".pdf" style="display:none" onchange="uploadPdf(this)"/>
+                    <span id="uploadStatus" class="upload-status"></span>
+                </div>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <p>👋 Hello! I'm Astra, your AI Assistant. How can I help you today?</p>
+                        <p style="margin-top:8px; font-size:13px; color:#888;">
+                            💡 Tip: Upload a PDF using the button above and I'll answer questions about it!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="chat-input-area">
+                <form onsubmit="sendMessage(event)">
+                    <div class="input-wrapper">
+                        <input
+                            type="text"
+                            id="userInput"
+                            class="chat-input"
+                            placeholder="Type your message or ask about your PDF..."
+                            autocomplete="off"
+                        />
+                        <button type="submit" class="send-btn" id="sendBtn">
+                            <span>Send</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
